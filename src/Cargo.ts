@@ -1,3 +1,5 @@
 export class Cargo {
-    public cargo: Cargo[] = [];
+    constructor(private cargo: string){}
+
+   addCargo(cargo: string){}
 }

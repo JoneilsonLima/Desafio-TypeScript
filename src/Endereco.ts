@@ -56,14 +56,4 @@ export class Endereco {
     set uf(valor: string) {
         this._uf = valor;
     }
-
-    listarEndereco() {
-       const enderecos = [];
-       enderecos.push(this._cep, this._logradouro, this._numero, this._complemento, this._cidade, this._uf)
-       enderecos.forEach((item) => {
-        if(item != '') {
-            console.log(item)
-        }
-       })
-    }
 }
