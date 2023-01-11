@@ -6,8 +6,9 @@ export class contapoupanca extends Conta {
         super(numero)
     }
 
-    public calcularRendimento() {
-        
+    public calcularRendimento(): number {
+        let rendimento = 0;
+        return rendimento
     }
     
     public calcularSaldo(): number {
@@ -20,9 +21,8 @@ export class contapoupanca extends Conta {
             saldoTotal = saldoTotal - debito.valor;
         })
 
-        return saldoTotal;
+        return saldoTotal + this.calcularRendimento();
     }
 }
 
-
-///////////////////pendente
+//Não concluido o Calculo do rendimento
