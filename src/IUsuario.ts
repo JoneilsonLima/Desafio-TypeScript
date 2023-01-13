@@ -1,3 +1,3 @@
-export class IUsuario {
-     autenticar(valor: boolean){}
+export interface IUsuario {
+     autenticar(): boolean;
 }

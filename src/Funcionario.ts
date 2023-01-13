@@ -1,7 +1,8 @@
 import { Cargo } from "./Cargo";
+import { IUsuario } from "./IUsuario";
 import { Pessoa } from "./Pessoa";
 
-export class Funcionario extends Pessoa {
+export class Funcionario extends Pessoa implements IUsuario {
     private _salario: number;
     private _cargo: Cargo[] = [];
     constructor(nome: string, cpf: string, telefone: string, salario: number) {
@@ -13,6 +14,10 @@ export class Funcionario extends Pessoa {
         const novoCargo = new Cargo(cargo);
         novoCargo.addCargo(cargo);
         this.cargo.push(novoCargo);
+    }
+
+    autenticar(): boolean {
+        return true;
     }
 
     get cargo(): Cargo[] {

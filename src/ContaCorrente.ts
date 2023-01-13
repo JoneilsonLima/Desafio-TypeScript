@@ -9,6 +9,7 @@ export class contaCorrente extends Conta {
     public transferir(contaDestino: Conta, valor: number): void {
         if (this.calcularSaldo() >= valor) {
             contaDestino.depositar(valor)
+            this.limite -= valor;
         }
     }
 

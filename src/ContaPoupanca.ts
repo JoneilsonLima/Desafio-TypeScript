@@ -21,7 +21,7 @@ export class contapoupanca extends Conta {
             saldoTotal = saldoTotal - debito.valor;
         })
 
-        return saldoTotal + this.calcularRendimento();
+        return saldoTotal + this.calcularRendimento(); //return saldoTotal + this.calcularRendimento();
     }
 }
 
