@@ -8,11 +8,22 @@ export class contapoupanca extends Conta {
 
     public calcularRendimento(): number {
         let rendimento = 0;
-        return rendimento
+
+        this.credito.forEach((credito) => {
+            rendimento += credito.valor;
+        })
+
+        this.debito.forEach((debito) => {
+            rendimento -= debito.valor;
+        })
+
+        let rendimentoTotal = rendimento * (this.rentabilidadeMensal * 0.01);
+
+        return rendimentoTotal;
     }
     
     public calcularSaldo(): number {
-        let saldoTotal = 0;
+        let saldoTotal = this.calcularRendimento();
         this.credito.forEach((credito) => {
             saldoTotal = saldoTotal + credito.valor;
         })
@@ -21,8 +32,6 @@ export class contapoupanca extends Conta {
             saldoTotal = saldoTotal - debito.valor;
         })
 
-        return saldoTotal + this.calcularRendimento(); //return saldoTotal + this.calcularRendimento();
+        return saldoTotal + this.calcularRendimento();
     }
 }
-
-//Não concluido o Calculo do rendimento

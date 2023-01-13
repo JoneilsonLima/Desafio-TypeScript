@@ -23,8 +23,6 @@ const clienteEndereco1 = new Cliente(true, '234-458-487-01' ,'(98) 98849-5432', 
 console.log(clienteEndereco1.listarEnderecos())
  
 
-
-
 /****************************  APLICAÇÃO 3  ***************************/
 //  Crie um cliente que possua uma ContaCorrente
 const enderecoCliente1 = new Endereco('64057-034', 'rua-9', '12', 'casa', 'São Luís', 'MA');

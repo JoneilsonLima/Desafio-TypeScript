@@ -8,7 +8,7 @@ export abstract class Conta {
 
     constructor(private numero: string) {}
 
-    public depositar(valor: number): void {
+    public depositar(valor: number, date = new Date()): void {
         const credito = new Credito(valor, new Date(), this.numero);
         this.credito.push(credito);
     }
