@@ -13,7 +13,7 @@ export abstract class Conta {
         this.credito.push(credito);
     }
 
-    public sacar(valor: number): void {
+    public sacar(valor: number, date = new Date()): void {
         if(this.calcularSaldo() >= valor) {
             const debito = new Debito(valor, new Date(), this.numero);
             this.debito.push(debito);
